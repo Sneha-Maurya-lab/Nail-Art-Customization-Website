@@ -1,0 +1,61 @@
+/* src/Pages/Signup.css */
+
+.signup-background {
+  background-image: url('C:\Users\Abhishek Maurya\Desktop\Nail art website\nail-art-website\public\images\nail7-bg.jpg'); /* ✅ Absolute path from public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.signup-container {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+.signup-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d63384;
+  text-align: center;
+}
+
+.signup-form input,
+.signup-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.signup-form button {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #c2186b;
+}

@@ -1,0 +1,91 @@
+/* src/pages/Gallery.css */
+
+.gallery-background {
+  background-image: url('C:\Users\Abhishek Maurya\Desktop\Nail art website\nail-art-website\public\images\Gallery-bg.jpg'); /* ✅ Place the image inside public/images/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+.gallery-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  color: #d63384;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.gallery-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(214, 51, 132, 0.3);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid #d63384;
+}
+
+.gallery-caption {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .gallery-card img {
+    height: 180px;
+  }
+
+  .gallery-caption {
+    font-size: 1rem;
+  }
+}

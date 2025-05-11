@@ -1,0 +1,165 @@
+/* Main section with dynamic background */
+.appointment-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 240, 245, 0.85)),
+    url('C:\Users\Abhishek Maurya\Desktop\Nail art website\nail-art-website\public\images\appointment-bg.jpg') no-repeat center center/cover;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Container styling */
+.appointment-container {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Title */
+.appointment-title {
+  text-align: center;
+  color: #e91e63;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Floating label group */
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.75rem 0.5rem 0.5rem 2.5rem;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.form-group label {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 0.75rem;
+  color: #e91e63;
+}
+
+/* Icons styling */
+.form-group svg {
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  color: #e91e63;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.form-group:focus-within svg {
+  transform: scale(1.2);
+  color: #c2185b;
+}
+
+/* Textarea customization */
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Submit button */
+.book-btn {
+  padding: 0.75rem 1.5rem;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #d81b60;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Confirmation message */
+.confirmation-message {
+  margin-top: 1rem;
+  text-align: center;
+  color: #4caf50;
+  font-weight: bold;
+  animation: bounceIn 0.5s ease forwards;
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .appointment-container {
+    padding: 1.5rem;
+  }
+
+  .appointment-title {
+    font-size: 1.5rem;
+  }
+}
